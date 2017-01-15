@@ -7,7 +7,7 @@ def total_cash(pet_shop)
 end
 
 def add_or_remove_cash(pet_shop, cash)
-  return  pet_shop[:admin][:total_cash] += cash
+  return pet_shop[:admin][:total_cash] += cash
 end
 
 def pets_sold(pet_shop)
@@ -46,6 +46,18 @@ def remove_pet_by_name(pet_shop, name)
   if pet != nil
     pet_shop[:pets].delete(pet)
   end
+end
+
+def add_pet_to_stock(pet_shop, new_pet)
+  return pet_shop[:pets].push(new_pet)
+end
+
+def customer_pet_count(customer)
+  return customer[:pets].count
+end
+
+def add_pet_to_customer(customer, new_pet)
+  return customer[:pets].push(new_pet)
 end
 
 
